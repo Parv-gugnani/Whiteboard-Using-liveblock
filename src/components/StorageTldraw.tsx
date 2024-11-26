@@ -7,15 +7,7 @@ import { useSelf } from "@liveblocks/react/suspense";
 import { Avatars } from "@/components/Avatars";
 import { Badge } from "@/components/Badge";
 
-/**
- * IMPORTANT: LICENSE REQUIRED
- * To remove the watermark, you must first purchase a license
- * Learn more: https://tldraw.dev/community/license
- */
-
 export function StorageTldraw() {
-  // Getting authenticated user info. Doing this using selectors instead
-  // of just `useSelf()` to prevent re-renders on Presence changes
   const id = useSelf((me) => me.id);
   const info = useSelf((me) => me.info);
 
@@ -28,7 +20,6 @@ export function StorageTldraw() {
       <Tldraw
         store={store}
         components={{
-          // Render a live avatar stack at the top-right
           StylePanel: () => (
             <div
               style={{

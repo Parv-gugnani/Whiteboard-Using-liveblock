@@ -5,11 +5,11 @@ import { Providers } from "./Providers";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Liveblocks",
+  title: "Parv-WhiteBoard",
 };
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["greek"],
   weight: ["400", "500", "600"],
   display: "swap",
 });

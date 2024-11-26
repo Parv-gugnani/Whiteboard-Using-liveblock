@@ -4,21 +4,19 @@ export type PresenceStates = "playing" | "seeking" | "paused";
 
 declare global {
   interface Liveblocks {
-    // Each user's Presence, for room.getPresence, room.subscribe("others"), etc.
     Presence: {
-      presence: any; // Used by tldraw
+      presence: any;
     };
     Storage: {
-      records: LiveMap<string, any>; // Used by tldraw
+      records: LiveMap<string, any>; 
     };
-    // Custom user info set when authenticating with a secret key
     UserMeta: {
-      id: string; // Accessible through `user.id`
+      id: string;
       info: {
         name: string;
         color: string;
         avatar: string;
-      }; // Accessible through `user.info`
+      };
     };
   }
 }
